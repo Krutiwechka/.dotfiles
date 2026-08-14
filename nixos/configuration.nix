@@ -9,6 +9,7 @@
 		./modules/audio.nix
 		./modules/hyprland.nix
 		./modules/user.nix
+		./modules/zram.nix
 	];
 
 	# EFI boot params
