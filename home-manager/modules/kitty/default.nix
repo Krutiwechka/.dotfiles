@@ -65,8 +65,8 @@
 		    "ctrl+c" = "copy_or_noop";
 		    "kitty_mod+v" = "paste_from_clipboard";
 		    "ctrl+v" = "paste_from_clipboard";
-		    "kitty_mod+s  paste_from_selection";
-		    "kitty_mod+o pass_selection_to_program";
+		    "kitty_mod+s" = "paste_from_selection";
+		    "kitty_mod+o" = "pass_selection_to_program";
 
 		    "kitty_mod+up" = "scroll_line_up";
 		    "kitty_mod+page_up" = "scroll_page_up";
@@ -78,8 +78,8 @@
 		    "kitty_mod+h" = "show_scrollback";
 		    "kitty_mod+g" = "show_last_command_output";
 
-			"kitty_mod+n" = "launch --location=neighbor"
-			"kitty_mod+f" = "launch --location=first"
+			#"kitty_mod+n" = "launch --location=neighbor";
+			"kitty_mod+f" = "launch --location=first";
 		    "kitty_mod+enter" = "launch --cwd=current";
 		    "kitty_mod+n" = "new_os_window_with_cwd";
 		    "kitty_mod+w" = "close_window";
