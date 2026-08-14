@@ -35,7 +35,7 @@
         ".." = "cd ..";
       };
 
-    initExtra = ''
+    initContent = ''
 		#fastfetch
 		${pkgs.fastfetch}/bin/fastfetch
 
