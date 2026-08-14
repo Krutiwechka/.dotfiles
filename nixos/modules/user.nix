@@ -1,3 +1,5 @@
+{pkgs, ...}:
+
 {
 	users.defaultUserShell = pkgs.zsh;
 	users.users.timojj = { 	#'passwd' to set password

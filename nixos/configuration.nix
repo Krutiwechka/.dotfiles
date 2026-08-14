@@ -17,10 +17,7 @@
 	boot.loader.efi.canTouchEfiVariables = true;
 
 	# ryzen brightness fix
-	boot.kernelParams = [ "acpi_backlight=video" ];
-
-	# use latest kernel
-	boot.kernelPackages = pkgs.linuxPackages_latest;
+	# boot.kernelParams = [ "acpi_backlight=video" ];
 
 	# hostname
 	networking.hostName = "nixos";
