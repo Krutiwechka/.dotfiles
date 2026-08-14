@@ -8,6 +8,7 @@
 		./disko.nix  #disks
 		./modules/audio.nix
 		./modules/hyprland.nix
+		./modules/user.nix
 	];
 
 	# EFI boot params
@@ -28,13 +29,6 @@
 
 	# time zone
 	time.timeZone = "Europe/Minsk";
-
-	# user
-	users.defaultUserShell = pkgs.zsh;
-	users.users.timojj = { #'passwd' to set password
-		isNormalUser = true;
-		extraGroups = [ "wheel" "networkmanager" ]; 
-	};
 
 	# enable flakes
 	nix.settings.experimental-features = ["flakes" "nix-command"];
