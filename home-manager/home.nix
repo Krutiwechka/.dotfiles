@@ -29,9 +29,9 @@ in
   	userEmail = "krutiwechka@gmail.com";
   };
   xdg.configFile = {
-  	"kitty".source = ../../dotfiles/.config/kitty;
-  	"hypr".source = ../../dotfiles/.config/hypr;
-  	"waybar".source = ../../dotfiles/.config/kitty;
+#  	"kitty".source = /home/timojj/dotfiles/.config/kitty;
+ # 	"hypr".source = /home/timojj/dotfiles/.config/hypr;
+  #	"waybar".source = dotfiles/.config/waybar;
   	
   }; 
   home.sessionVariables = {

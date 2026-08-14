@@ -12,16 +12,25 @@
     		url = "github:youwen5/zen-browser-flake";
         	inputs.nixpkgs.follows = "nixpkgs";
     	};
-};
+    	disko = {
+    	      url = "github:nix-community/disko";
+    	      inputs.nixpkgs.follows = "nixpkgs";
+    	};
+	};
 
-  	outputs = {self, nixpkgs, home-manager, ...}@inputs: {
+  	outputs = {self, nixpkgs, home-manager, disko,  ...}@inputs:
     	let 
     		system = "x86_64-linux";
-		in {
+		in
+
+		{
 			nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 				inherit system;
 				specialArgs = { inherit inputs; };
-				modules = [./nixos/configuration.nix];
+				modules = [
+					./nixos/configuration.nix
+					disko.nixosModules.disko
+				];
 			};
 			homeConfigurations.timojj = home-manager.lib.homeManagerConfiguration {
 				pkgs = nixpkgs.legacyPackages.${system};
@@ -29,5 +38,5 @@
 				extraSpecialArgs = { inherit inputs; };
 			};				
 		};
-  	};
 }
+
