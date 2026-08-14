@@ -10,9 +10,7 @@ in
 	];
 	home.username = "timojj";
 	home.homeDirectory = "/home/timojj";
-
 	home.stateVersion = "26.05";
-
 	home.packages = with pkgs; [
 	kitty
 	brightnessctl
