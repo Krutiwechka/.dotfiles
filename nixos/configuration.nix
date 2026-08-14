@@ -1,137 +1,78 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
+#nixos system configuration
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./disko.nix
-    ];
+	imports =
+	[
+		./hardware-configuration.nix  #hardware
+		./disko.nix  #disks
+		./modules/audio.nix
+		./modules/hyprland.nix
+	];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  
-  boot.kernelParams = [ "acpi_backlight=video" ];
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+	# EFI boot params
+	boot.loader.systemd-boot.enable = true;
+	boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+	# ryzen brightness fix
+	boot.kernelParams = [ "acpi_backlight=video" ];
 
-  # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
+	# use latest kernel
+	boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # Set your time zone.
-  time.timeZone = "Europe/Minsk";
+	# hostname
+	networking.hostName = "nixos";
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+	# configure network connections interactively with nmcli or nmtui
+	networking.networkmanager.enable = true;
 
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
+	# time zone
+	time.timeZone = "Europe/Minsk";
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = false;
+	# user
+	users.defaultUserShell = pkgs.zsh;
+	users.users.timojj = { #'passwd' to set password
+		isNormalUser = true;
+		extraGroups = [ "wheel" "networkmanager" ]; 
+	};
 
+	# enable flakes
+	nix.settings.experimental-features = ["flakes" "nix-command"];
 
-  
+	
+	# system pkgs
+	environment.systemPackages = with pkgs; [
+	   curl
+	   zsh
+	];
 
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
+### SERVICES
+	#CUPS
+	services.printing.enable = true;
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-  #services.flatpak.enable = true;  
-  services.gvfs.enable = true;
-  services.tumbler.enable = true;
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
-  services.pipewire = {
-     enable = true;
-     pulse.enable = true;
-  };
+		#services.flatpak.enable = true;  
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
+	# GNOME virtual file system
+	services.gvfs.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.timojj = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-  };
+	# file prewiew
+	services.tumbler.enable = true;
 
-  # programs.firefox.enable = true;
+	# thunar
+	programs.thunar.enable = true;
 
-  # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
-  environment.systemPackages = with pkgs; [
-     wget
-     curl
-  ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-  programs.hyprland = {
-     enable = true;
-     withUWSM = true;
-     xwayland.enable = true;
-  };
-  programs.thunar.enable = true;
-  # List services that you want to enable:
-  services.displayManager = {
-     sddm = {
-        enable = true;
-        wayland.enable = true;
-     };
-  };
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
-
-  # This option defines the first version of NixOS you have installed on this particular machine,
-  # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
-  #
-  # Most users should NEVER change this value after the initial install, for any reason,
-  # even if you've upgraded your system to a new NixOS release.
-  #
-  # This value does NOT affect the Nixpkgs version your packages and OS are pulled from,
-  # so changing it will NOT upgrade your system - see https://nixos.org/manual/nixos/stable/#sec-upgrading for how
-  # to actually do that.
-  #
-  # This value being lower than the current NixOS release does NOT mean your system is
-  # out of date, out of support, or vulnerable.
-  #
-  # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
-  # and migrated your data accordingly.
-  #
-  # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "26.05"; # Did you read the comment?
-  nix.settings.experimental-features = ["flakes" "nix-command"];
+	# sddm
+	services.displayManager = {
+	   sddm = {
+	      enable = true;
+	      wayland.enable = true;
+	   };
+	};
+	
+	programs.zsh.enable = true;
+	
+##############################################
+system.stateVersion = "26.05"; #don't touch :D
+##############################################
 }
 
