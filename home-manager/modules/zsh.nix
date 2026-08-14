@@ -34,22 +34,29 @@
 
         ".." = "cd ..";
       };
-initContent = lib.mkAfter ''
-      # fastfetch
-      ${pkgs.fastfetch}/bin/fastfetch
+    initContent = ''
+		#fastfetch
+		${pkgs.fastfetch}/bin/fastfetch
 
-      # Transient prompt logic
-      autoload -Uz add-zle-hook-widget
-      autoload -Uz add-zsh-hook
+		# Transient prompt logic
+		autoload -Uz add-zsh-hook
+		add-zsh-hook precmd transient-prompt-precmd
 
-      function transient-prompt-zle-line-finish() {
-        # Генерируем компактный промпт перед выполнением команды
-        PROMPT="$(${pkgs.starship}/bin/starship prompt --profile transient)"
-        RPROMPT="$(${pkgs.starship}/bin/starship prompt --profile rtransient)"
-        zle .reset-prompt
-      }
+		TRANSIENT_PROMPT="''${PROMPT// prompt / prompt --profile transient }"
+		TRANSIENT_RPROMPT="''${PROMPT// prompt / prompt --profile rtransient }"
 
-      add-zle-hook-widget zle-line-finish transient-prompt-zle-line-finish
-    '';
+		function transient-prompt-precmd {
+		    TRAPINT() { transient-prompt; return $(( 128 + $1 )) }
+		    SAVED_PROMPT="$(eval "printf '%s' \"''${TRANSIENT_PROMPT}\"")"
+		    SAVED_RPROMPT="$(eval "printf '%s' \"''${TRANSIENT_RPROMPT}\"")"
+		}
+
+		autoload -Uz add-zle-hook-widget
+		add-zle-hook-widget zle-line-finish transient-prompt
+
+		function transient-prompt() {
+		    PROMPT="$SAVED_PROMPT" RPROMPT="$SAVED_RPROMPT" zle .reset-prompt
+		}
+		'';  
    };
 }
