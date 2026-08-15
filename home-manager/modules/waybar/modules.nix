@@ -47,61 +47,61 @@ programs.waybar.settings = {
         critical = 15;
       };
       format = "{icon} {capacity}%";
-      "format-full" = " {icon} {capacity}%";
-      "format-charging" = " {capacity}%";
-      "format-plugged" = " {capacity}%";
-      "format-icons" = [ "" "" "" "" "" ];
+      format-full = "{icon} {capacity}%";
+      format-charging = " {capacity}%";
+      format-plugged = " {capacity}%";
+      format-icons = [ "" "" "" "" "" ];
     };
 
     "power-profiles-daemon" = {
       format = "{icon}";
-      "tooltip-format" = "Power profile: {profile}\nDriver: {driver}";
+      tooltip-format = "Power profile: {profile}\nDriver: {driver}";
       tooltip = true;
-      "format-icons" = {
+      format-icons = {
         default = "";
         performance = "";
         balanced = "";
-        "power-saver" = "";
+        power-saver = "";
       };
     };
 
     "network" = {
-      "format-wifi" = " {essid} ({signalStrength}%)";
-      "format-ethernet" = "{ipaddr}/{cidr} ";
-      "tooltip-format" = "{ifname} via {gwaddr}";
-      "format-linked" = "{ifname} (No IP) ";
-      "format-disconnected" = "Disconnected ⚠";
-      "on-click" = "~/.local/bin/networkmanager_dmenu";
+      format-wifi = " {essid} ({signalStrength}%)";
+      format-ethernet = "{ipaddr}/{cidr} ";
+      tooltip-format = "{ifname} via {gwaddr}";
+      format-linked = "{ifname} (No IP) ";
+      format-disconnected = "Disconnected ⚠";
+      on-click = "~/.local/bin/networkmanager_dmenu";
     };
 
     "pulseaudio" = {
-      "scroll-step" = 1;
+      scroll-step = 1;
       format = "{icon} {volume}% ";
-      "format-bluetooth" = "{icon} {volume}%";
-      "format-bluetooth-muted" = " {icon}";
-      "format-muted" = "";
-      "format-icons" = {
+      format-bluetooth = "{icon} {volume}%";
+      format-bluetooth-muted = " {icon}";
+      format-muted = "";
+      format-icons = {
         headphone = "";
-        "hands-free" = "";
+        hands-free = "";
         headset = "";
         phone = "";
         portable = "";
         car = "";
         default = [ "" "" "" ];
       };
-      "on-click" = "pavucontrol";
+      on-click = "pavucontrol";
     };
 
     "cpu" = {
       format = "󰍛 {usage}% ";
-      "on-scroll-up" = true;
-      "on-scroll-down" = true;
+      on-scroll-up = true;
+      on-scroll-down = true;
     };
 
     "memory" = {
       format = " {}% ";
-      "on-scroll-up" = true;
-      "on-scroll-down" = true;
+      on-scroll-up = true;
+      on-scroll-down = true;
     };
 
     "disk" = {
@@ -111,14 +111,14 @@ programs.waybar.settings = {
     };
 
     "tray" = {
-      "icon-size" = 18;
+      icon-size = 14;
       spacing = 0;
-      "show-passive-icons" = true;
+      show-passive-icons = true;
     };
 
     "hyprland/window" = {
       format = "{}";
-      "max-length" = 60;
+      max-length = 60;
     };
 
     "custom/divider1" = {
