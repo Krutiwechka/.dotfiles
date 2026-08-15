@@ -27,6 +27,7 @@
 
       	newyear = "bash ~/Downloads/hy.sh";
 
+		pkgs = "micro .dotfiles/home-manager/pkgs.nix";
         gs = "git status";
         ga = "git add";
         gc = "git commit";
