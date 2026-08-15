@@ -1,7 +1,7 @@
 {
   programs.starship = {
     enable = true;
-    enableZshIntegration = true;
+    enableZshIntegration = false;
     settings = {
 		format = "$username[](fg:#3e0839 bg:#701E58)$directory[](fg:#701E58 bg:#a64d82)$git_branch$git_status$python$java$c$cpp[](fg:#a64d82 bg:#none)$fill[](fg:#701E58 bg:none)$cmd_duration[](fg:#3e0839 bg:#701E58)$time$line_break$character";
 		character = {
