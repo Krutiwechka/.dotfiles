@@ -1,0 +1,97 @@
+@define-color dark1 #3e0839;
+@define-color dark2 #701E58;
+@define-color light1 #EDECF7;
+@define-color dark3 #80235E;
+@define-color light2 #A5D6E8;
+@define-color light3 #D063A8;
+@define-color light4 #C73A76;
+@define-color light5 #A64D82;
+@define-color dark4 #1B1116;
+* {
+    font-family: "FiraCode Nerd Font", monospace;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window#waybar {
+	margin: 0px;
+    background-color: rgba(27, 17, 22, 1);
+    color: @light4;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+tooltip {
+  background: rgba(128, 35, 94, 0.7);
+  border: 2px solid rgba(112, 30, 88, 0.7);
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces{
+	font-size: 19px;
+	margin-left: 10px;
+	margin-right: 30px;
+}
+#workspaces button.active{
+	font-size: 22px;
+	color: @light4;
+}
+#window{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#network{
+	padding-left:5px;
+	padding-right:5px;
+	color: @light1;
+	background-color: @light5;
+}
+#clock{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+#tray{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+#hardware{
+	background-color: @dark2;
+	color: @light1;
+	padding-left:5px;
+}
+#pulseaudio{
+	margin-right: 6px;
+}
+#device{
+ 	background-color: @dark1;
+ 	color: @light1;
+ 	padding-right: 10px;
+
+}
+#power-profiles-daemon{
+	margin-right:12px;
+}
+#backlight{
+	margin-right:13px;
+	padding-left:5px;
+		
+}
+
+#custom-divider3{
+	font-size: 26px;
+	background: @dark4;
+	color: @light5;}
+#custom-divider2{
+	font-size: 26px;
+	background: @dark2;
+	color: @dark1;
+}
+#custom-divider1{
+	font-size: 26px;
+	background: @light5;
+	color: @dark2;}
+
