@@ -5,11 +5,14 @@
 
     settings = {
       preload = [
-        "../wallpapers/wallpaper1.png"
+         "~/.dotfiles/home-manager/modules/hypr/wallpapers/wallpaper1.png"
       ];
 
       wallpaper = [
-        "../wallpapers/wallpaper1.png"
+      	{
+      		monitor = "";
+      		path = "~/.dotfiles/home-manager/modules/hypr/wallpapers/wallpaper1.png";
+      	}
       ];
     };
   };

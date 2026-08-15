@@ -2,14 +2,16 @@
 
 {
   wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.systemd.enable = true;
+  wayland.windowManager.hyprland.systemd.enable = false;
   wayland.windowManager.hyprland.configType = "lua";
 
   wayland.windowManager.hyprland.settings.config = {
     #####################
     ### LOOK AND FEEL ###
     #####################
-
+	exec-once = [
+	  "uwsm finalize"
+	];
     general = {
       gaps_in = 0;
       gaps_out = 0;

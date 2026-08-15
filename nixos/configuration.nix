@@ -52,12 +52,13 @@
 
 	# thunar
 	programs.thunar.enable = true;
-
+	# uswm
+	
 	# sddm
 	services.displayManager = {
 	   sddm = {
-	      enable = false;
-	      wayland.enable = false;
+	      enable = true;
+	      wayland.enable = true;
 	   };
 	};
 	
