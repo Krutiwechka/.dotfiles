@@ -25,7 +25,7 @@ in
 		telegram-desktop
 		zen-browser
 
-		#fonta
+		#font
 		nerd-fonts.fira-code
 	];
 }
