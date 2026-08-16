@@ -24,7 +24,7 @@ in
 		#apps
 		telegram-desktop
 		zen-browser
-		tetrio-plus
+		tetrio-desktop
 		#font
 		nerd-fonts.fira-code
 	];
