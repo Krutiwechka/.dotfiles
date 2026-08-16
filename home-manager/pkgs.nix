@@ -15,7 +15,7 @@ in
 		#utils
 		wl-clipboard
 		xclip
-		
+
 		#cli
 		micro
 		fastfetch
@@ -24,7 +24,7 @@ in
 		#apps
 		telegram-desktop
 		zen-browser
-
+		tetrio-plus
 		#font
 		nerd-fonts.fira-code
 	];
