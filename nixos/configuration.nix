@@ -22,6 +22,8 @@
 	# hostname
 	networking.hostName = "nixos";
 
+	# unfree pkgs
+	nixpkgs.config.allowUnfree = true;
 	# configure network connections interactively with nmcli or nmtui
 	networking.networkmanager.enable = true;
 
