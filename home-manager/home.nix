@@ -5,6 +5,7 @@
 		./modules
 		./pkgs.nix
 	];
+	nixpkgs.config.allowUnfree = true;
 	home.username = "timojj";
 	home.homeDirectory = "/home/timojj";
 	home.stateVersion = "26.05";
