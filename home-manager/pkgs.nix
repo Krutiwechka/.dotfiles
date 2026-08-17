@@ -7,10 +7,7 @@ in
 	home.packages = with pkgs; [
 
 		#workflow
-		mako
-		kitty
 		rofi
-		waybar
 
 		#utils
 		wl-clipboard
@@ -18,9 +15,8 @@ in
 
 		#cli
 		micro
-		fastfetch
 		brightnessctl
-
+		vim
 		#apps
 		telegram-desktop
 		zen-browser
