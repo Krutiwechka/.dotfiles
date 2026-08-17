@@ -8,5 +8,6 @@
     ./starship.nix
     ./appearance.nix
     ./mako.nix
+    ./fastfetch.nix
   ];
 }
