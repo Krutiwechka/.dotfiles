@@ -63,7 +63,16 @@
 	};
 	
 	programs.zsh.enable = true;
-	
+	nix.gc = {
+		  automatic = true;
+		  dates = "weekly";
+		  options = "--delete-older-than 14d";
+	};
+		
+	nix.optimise = {
+	  automatic = true;
+	  dates = [ "weekly" ];
+	};	
 ##############################################
 system.stateVersion = "26.05"; #don't touch :D
 ##############################################
