@@ -9,5 +9,6 @@
     ./appearance.nix
     ./mako.nix
     ./fastfetch.nix
+    ./garbage-collector.nix
   ];
 }
