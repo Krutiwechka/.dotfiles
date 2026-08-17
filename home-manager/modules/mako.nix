@@ -24,10 +24,10 @@
       margin = 5;
       padding = 7;
       border-size = 2;
-      border-radius = "0:0:8:0";
+      border-radius = "0,0,8,0";
       icon-location = "right";
 
-      format = "<span alpha=\"35%\" size=\"8pt\" weight=\"bold\">%a</span>\n<b>%s</b>\n%b";
+      format = ''<span alpha="35%%" size="8pt" weight="bold">%a</span>\n<b>%s</b>\n%b'';
       default-timeout = 5000;
 
       "urgency=critical" = {
@@ -36,7 +36,7 @@
       };
 
       "app-name=\"Telegram Desktop\"" = {
-        format = "<b>%s</b>\n%b";
+        format = ''<b>%s</b>\n%b'';
       };
     };
   };
