@@ -23,7 +23,7 @@
 	        cursor_shape_unfocused = "hollow";
 	        cursor_blink_interval = 0;
 	        cursor_trail = 1;
-	
+			
 			scrollback_lines = 5000;
 	        scrollbar = "hovered";
 	        scrollback_fill_enlarged_window = true;
@@ -32,6 +32,8 @@
 			mouse_hide_wait = "-1.0";
 			url_style = "curly";
 			copy_on_select = true; 		
+
+			notify_on_cmd_finish = ''unfocused 10.0 command notify-send "Kitty: command [%c] completed"'';
 
 			enable_audio_bell = false;
 			bell_on_tab = "!";
@@ -43,7 +45,7 @@
 		    single_window_padding_width = 5;
 		    hide_window_decorations = true;
 		
-		    window_logo_path  = "~/.dotfiles/.local/share/pics/kafka_kitty.png";
+		    window_logo_path  = toString ./pics/kafka_kitty.png;
 		    window_logo_position = "bottom-right";
 		    window_logo_alpha = "0.2";
 		    window_logo_scale = 15;
