@@ -7,5 +7,6 @@
     ./zsh.nix
     ./starship.nix
     ./appearance.nix
+    ./mako.nix
   ];
 }
