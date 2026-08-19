@@ -1,3 +1,5 @@
+{pkgs, ...}:
+
 {
 programs.waybar.settings = {
   mainBar = {
@@ -71,7 +73,7 @@ programs.waybar.settings = {
       tooltip-format = "{ifname} via {gwaddr}";
       format-linked = "{ifname} (No IP) ";
       format-disconnected = "Disconnected ⚠";
-      on-click = "~/.local/bin/networkmanager_dmenu";
+      on-click = "${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
     };
 
     "pulseaudio" = {
