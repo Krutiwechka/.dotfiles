@@ -10,5 +10,6 @@
     ./mako.nix
     ./fastfetch.nix
     ./garbage-collector.nix
+    ./rofi.nix
   ];
 }
