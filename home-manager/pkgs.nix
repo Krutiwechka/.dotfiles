@@ -7,7 +7,6 @@ in
 	home.packages = with pkgs; [
 
 		#workflow
-		rofi
 
 		#utils
 		wl-clipboard

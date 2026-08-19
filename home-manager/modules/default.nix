@@ -11,5 +11,6 @@
     ./fastfetch.nix
     ./garbage-collector.nix
     ./rofi.nix
+    ./networkmanager-dmenu.nix
   ];
 }
