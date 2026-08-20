@@ -21,14 +21,7 @@
 		  gtk-application-prefer-dark-theme = true;
 		};
 	};
-#	home.pointerCursor = {
-#	  name = "Moga-Neon-Magenta";
-#	  size = 16;
-#	  package = pkgs.moga-cursors;
-#	  gtk.enable = true;
-#	  x11.enable = true;
-#	};
-
+	
 	dconf.settings."org/gnome/desktop/interface" = {
 	    gtk-theme = "Sweet-Dark-v40";
 	    icon-theme = "candy-icons";
