@@ -13,7 +13,7 @@ in
 		xclip
 		tree
 		zip
-		upzip
+		unzip
 		#cli
 		micro
 		brightnessctl
