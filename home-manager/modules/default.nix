@@ -3,6 +3,7 @@
   	./kitty
   	./hypr
   	./waybar
+  	./appearance
     ./git.nix
     ./zsh.nix
     ./starship.nix

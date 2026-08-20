@@ -1,13 +1,6 @@
-{pkgs, ...}:
-
 {
 	gtk = {
 		enable = true;
-
-#		theme = {
-#			name = "Sweet-Dark-v40";
-#			package = pkgs.sweet;
-#		};
 
 		iconTheme = {
 		      name = "candy-icons";
