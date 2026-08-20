@@ -36,7 +36,7 @@
       parse-known-hosts = true;
       combi-modes = "window,drun,run";
 
-      matching = "fuzzy";
+#     matching = "fuzzy";
       tokenize = true;
       m = "-2";
       dpi = -1;
