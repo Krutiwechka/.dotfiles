@@ -18,6 +18,8 @@ in
 		micro
 		brightnessctl
 		vim
+
+		cmatrix
 		#apps
 		telegram-desktop
 		zen-browser
