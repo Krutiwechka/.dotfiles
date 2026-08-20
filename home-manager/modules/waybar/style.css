@@ -8,7 +8,7 @@
 @define-color light5 #A64D82;
 @define-color dark4 #1B1116;
 * {
-    font-family: "FiraCode Nerd Font", monospace;
+	font-family: "FiraCode Nerd Font Mono";   
     font-weight: bold;
     border: none;
     border-radius: 0;
