@@ -2,6 +2,7 @@
 {
 	imports = [
 		./theme.nix
+		./cursor.nix
 	];
 	gtk = {
 		enable = true;
