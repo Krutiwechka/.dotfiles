@@ -12,6 +12,7 @@ in
 		wl-clipboard
 		xclip
 		tree
+		zip
 		#cli
 		micro
 		brightnessctl
