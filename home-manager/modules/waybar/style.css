@@ -37,7 +37,7 @@ tooltip label {
 	margin-right: 30px;
 }
 #workspaces button.active{
-	font-size: 22px;
+	font-size: 21px;
 	color: @light4;
 }
 #window{
