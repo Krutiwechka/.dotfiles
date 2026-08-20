@@ -113,7 +113,7 @@ programs.waybar.settings = {
     };
 
     "tray" = {
-      icon-size = 14;
+      icon-size = 16;
       spacing = 0;
       show-passive-icons = true;
     };
