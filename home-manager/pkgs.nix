@@ -20,6 +20,7 @@
 		#apps
 		telegram-desktop
 		tetrio-desktop
+		obsidian
 		#font
 		nerd-fonts.fira-code
 	];
