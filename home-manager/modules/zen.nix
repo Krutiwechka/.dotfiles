@@ -40,7 +40,15 @@ let
 
 	#theme
     "zen.view.window.scheme" = 0;
-    "layout.css.prefers-color-scheme.content-override" = 0; 
+    "layout.css.prefers-color-scheme.content-override" = 0;
+	"zoom.level" = 1.1;
+	"browser.zoom.siteSpecific" = true;
+	"browser.zoom.full" = true; 
+	"font.name.serif.x-western" = "FiraCode Nerd Font";
+	  "font.name.sans-serif.x-western" = "FiraCode Nerd Font";
+	  "font.name.monospace.x-western" = "FiraCode Nerd Font Mono";
+	  "font.size.variable.x-western" = 16;
+	  "font.size.monospace.x-western" = 12;
   };
 
   extensions = [
