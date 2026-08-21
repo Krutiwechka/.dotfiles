@@ -12,5 +12,6 @@
     ./garbage-collector.nix
     ./rofi.nix
     ./networkmanager-dmenu.nix
+    ./zen.nix
   ];
 }
