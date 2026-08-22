@@ -27,28 +27,37 @@ let
     "media.ffmpeg.vaapi.enabled" = true;
     "gfx.webrender.all" = true;
 
-    "media.peerconnection.enabled" = false;
     "geo.enabled" = false;
     "dom.battery.enabled" = false;
-    "dom.event.clipboardevents.enabled" = false;
 
     #cookies
     "network.cookie.cookieBehavior" = 5;
-    "network.cookie.lifetimePolicy" = 2;
     "network.http.referer.trimmingPolicy" = 2;
     "network.http.referer.XOriginPolicy" = 2;
 
 	#theme
     "zen.view.window.scheme" = 0;
     "layout.css.prefers-color-scheme.content-override" = 0;
-	"zoom.level" = 1.1;
+	"layout.css.devPixelsPerPx" = "1.1";
 	"browser.zoom.siteSpecific" = true;
 	"browser.zoom.full" = true; 
 	"font.name.serif.x-western" = "FiraCode Nerd Font";
-	  "font.name.sans-serif.x-western" = "FiraCode Nerd Font";
-	  "font.name.monospace.x-western" = "FiraCode Nerd Font Mono";
-	  "font.size.variable.x-western" = 16;
-	  "font.size.monospace.x-western" = 12;
+	"font.name.sans-serif.x-western" = "FiraCode Nerd Font";
+	"font.name.monospace.x-western" = "FiraCode Nerd Font Mono";
+	"font.size.variable.x-western" = 16;
+	"font.size.monospace.x-western" = 12;
+
+	"font.name.serif.x-cyrillic" = "FiraCode Nerd Font";
+	"font.name.sans-serif.x-cyrillic" = "FiraCode Nerd Font";
+	"font.name.monospace.x-cyrillic" = "FiraCode Nerd Font Mono";
+	"font.size.variable.x-cyrillic" = 16;
+	"font.size.monospace.x-cyrillic" = 12;
+
+	"font.name.serif.x-unicode" = "FiraCode Nerd Font";
+	"font.name.sans-serif.x-unicode" = "FiraCode Nerd Font";
+	"font.name.monospace.x-unicode" = "FiraCode Nerd Font Mono";
+	"font.size.variable.x-unicode" = 16;
+	"font.size.monospace.x-unicode" = 12;
   };
 
   extensions = [
