@@ -1,33 +1,63 @@
 {
-  wayland.windowManager.hyprland.settings = {
-    window_rule = [
-      {
-        name = "float";
-        match.class = "thunar";
-      }
-      {
-        name = "size 1000 800";
-        match.class = "thunar";
-      }
-      {
-        name = "center";
-        match.class = "thunar";
-      }
-      {
-        name = "suppressevent maximize";
-        match.class = ".*";
-      }
-      {
-        name = "nofocus";
-        match = {
-          class = "^$";
-          title = "^$";
-          xwayland = 1;
-          float = 1;
-          fullscreen = 0;
-          pin = 0;
-        };
-      }
-    ];
-  };
+	wayland.windowManager.hyprland.settings = {
+    	window_rule = [
+    		{
+    			match.class = "thunar";
+    			float = true;
+    			pin = true;
+    			size = "1000 800";
+    			center = true;
+    		}
+    		{
+    			match.class = ".*";
+    			suppress_event = "maximize";
+    		}
+    		{
+    			match = {
+    				class = "^$";
+    				title = "^$";
+    				xwayland = true;
+    				float = true;
+    				fullscreen = false;
+    				pin = false;
+    			};
+    			no_initial_focus = true;
+    		}
+    		{
+    			match.modal = true;
+    			float = true;
+    			size = "1000 800";
+    			move = "200 200";
+    			rounding = 10;
+    		}
+    		{
+    			match.class = "Telegram";
+    			workspace = "5";
+    		}
+    		{
+    		    match.class = "Obsidian";
+    		   	workspace = "4";
+    		}
+    		{ 
+    			match.title = "Picture-in-Picture";
+    		 	float = true; 
+    		 	pin = true; 
+    			no_initial_focus = true; 
+    		}
+   			{
+   				match = { 	
+   					float = false;
+   					workspace = "w[tv1]";
+   					class = "negative:kitty"; 
+   		  		};
+   		  		border_size = 0;
+			}    		  
+    	];
+    	layer_rule = [
+			{
+				match.namespace = "^rofi$";
+				blur = true;
+			}
+    	];
+  	};
 }
