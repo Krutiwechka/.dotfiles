@@ -36,11 +36,6 @@
 		cat = "bat";
 		find = "fd";
 
-		ls  = "eza --icons";
-		ll  = "eza -la --icons --git";
-		la  = "eza -a --icons";
-		lt  = "eza --tree --icons --level=2";
-
         ".." = "cd ..";
       };
 		initContent = ''

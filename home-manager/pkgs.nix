@@ -18,7 +18,6 @@
 		ntfs3g
 		udisks
 		ripgrep
-		eza
 		fd
 		#cli
 		micro
