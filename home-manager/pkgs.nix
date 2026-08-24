@@ -17,8 +17,9 @@
 		bottom
 		ntfs3g
 		udisks
-		fzf
 		ripgrep
+		eza
+		fd
 		#cli
 		micro
 		vim

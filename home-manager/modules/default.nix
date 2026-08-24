@@ -13,5 +13,6 @@
     ./rofi.nix
     ./networkmanager-dmenu.nix
     ./zen.nix
+    ./cli.nix
   ];
 }
