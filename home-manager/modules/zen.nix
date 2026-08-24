@@ -32,9 +32,7 @@ let
 
     #cookies
     "network.cookie.cookieBehavior" = 5;
-    "network.http.referer.trimmingPolicy" = 2;
-    "network.http.referer.XOriginPolicy" = 2;
-
+    
 	#theme
     "zen.view.window.scheme" = 0;
     "layout.css.prefers-color-scheme.content-override" = 0;
