@@ -7,13 +7,20 @@
 
 		#utils
 		wl-clipboard
+		brightnessctl
+		cliphist
 		xclip
 		tree
 		zip
 		unzip
+		wget
+		bottom
+		ntfs3g
+		udisks
+		fzf
+		ripgrep
 		#cli
 		micro
-		brightnessctl
 		vim
 
 		cmatrix
