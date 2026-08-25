@@ -6,8 +6,8 @@ in {
     "*" = {
       bg-col        = mkLiteral "#1B1116cc";
       bg-col-light  = mkLiteral "#1B1116cc";
-      border-col    = mkLiteral "#A64D82DD";
-      selected-col  = mkLiteral "#701E58dd";
+      border-col    = mkLiteral "#A64D82cc";
+      selected-col  = mkLiteral "#701E58cc";
       fg-col        = mkLiteral "#EDECF7FF";
       fg-col2       = mkLiteral "#6c7086";
       grey          = mkLiteral "#6c7086";
@@ -40,7 +40,7 @@ in {
       background-color = mkLiteral "transparent";
       text-color = mkLiteral "@fg-col";
       padding = mkLiteral "8px 12px";
-      spacing = "10px";
+      spacing = mkLiteral "8px";
       children = map mkLiteral [ "prompt" "entry" ];
     };
 
@@ -65,12 +65,15 @@ in {
       cycle = true;
       dynamic = true;
       layout = mkLiteral "vertical";
+      children = map mkLiteral [ "element" "scrollbar" ];
+      scrollbar = true;
     };
 
     "element" = {
       background-color = mkLiteral "transparent";
       text-color = mkLiteral "@fg-col";
       padding = mkLiteral "6px 10px";
+      spacing = mkLiteral "8px";
       orientation = mkLiteral "horizontal";
     };
 
@@ -114,7 +117,6 @@ in {
     };
 
     "button" = {
-#      background-color = mkLiteral "@bg-col-light";
       background-color = mkLiteral "transparent";
       text-color = mkLiteral "@fg-col";
       padding = mkLiteral "6px";
@@ -135,12 +137,11 @@ in {
       text-color = mkLiteral "@fg-col";
     };
     "scrollbar" = {
-      background-color = mkLiteral "@bg-col-light";
+      background-color = mkLiteral "transparent";
       width = mkLiteral "6px";
-      border-radius = mkLiteral "3px";
       handle-width = mkLiteral "6px";
-      handle-background = mkLiteral "@border-col";
-      handle-border-radius = mkLiteral "3px";
+      handle-color = mkLiteral "@border-col";
+      padding = mkLiteral "3px"; 
     };
   };
 }
