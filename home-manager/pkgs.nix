@@ -28,6 +28,12 @@
 		telegram-desktop
 		tetrio-desktop
 		obsidian
+
+		qview
+		zathura
+		vlc
+		foliate
+		onlyoffice-desktopeditors
 		#font
 		nerd-fonts.fira-code
 	];
