@@ -17,7 +17,7 @@
 	boot.loader.efi.canTouchEfiVariables = true;
 
 	# ryzen brightness fix
-	boot.kernelParams = [ "acpi_backlight=video" ];
+	boot.kernelParams = [ "acpi_backlight=native" "amdgpu.dcdebugmask=0x40000"]; #fixed in 7.1.9 kernel version so its temporary
 
 	# hostname
 	networking.hostName = "nixos";
