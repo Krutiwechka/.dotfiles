@@ -55,17 +55,17 @@ programs.waybar.settings = {
       format-icons = [ "" "" "" "" "" ];
     };
 
-    "power-profiles-daemon" = {
-      format = "{icon}";
-      tooltip-format = "Power profile: {profile}\nDriver: {driver}";
-      tooltip = true;
-      format-icons = {
-        default = "";
-        performance = "";
-        balanced = "";
-        power-saver = "";
-      };
-    };
+#    "power-profiles-daemon" = {
+#      format = "{icon}";
+#      tooltip-format = "Power profile: {profile}\nDriver: {driver}";
+#      tooltip = true;
+#      format-icons = {
+#        default = "";
+#        performance = "";
+#        balanced = "";
+#        power-saver = "";
+#      };
+#    };
 
     "network" = {
       format-wifi = " {essid} ({signalStrength}%)";
