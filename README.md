@@ -1,6 +1,6 @@
 # ❄️ Nixfiles
-## My hyprland-based NixOS setup
----
+My hyprland-based NixOS setup
+
 ## Stack
 
 OS: NixOS  
