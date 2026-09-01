@@ -10,6 +10,7 @@
 		./modules/hyprland.nix
 		./modules/user.nix
 		./modules/zram.nix
+		./modules/tlp.nix
 	];
 
 	# EFI boot params

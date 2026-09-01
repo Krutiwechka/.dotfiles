@@ -14,6 +14,5 @@
     ./networkmanager-dmenu.nix
     ./zen.nix
     ./cli.nix
-    ./tlp.nix
   ];
 }
