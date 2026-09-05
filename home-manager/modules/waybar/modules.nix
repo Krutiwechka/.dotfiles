@@ -50,7 +50,7 @@ programs.waybar.settings = {
       };
       format = "{icon} {capacity}%";
       format-full = "{icon} {capacity}%";
-      format-charging = " {capacity}%";
+      format-charging = "󰂄 {capacity}%";
       format-plugged = " {capacity}%";
       format-icons = [ "" "" "" "" "" ];
     };
